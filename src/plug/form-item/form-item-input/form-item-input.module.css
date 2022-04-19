@@ -1,0 +1,10 @@
+.root {
+  top: 1px;
+}
+
+.root input {
+  width: calc(100% - 5px * 2);
+
+  border: none;
+  outline: none;
+}

@@ -1,0 +1,54 @@
+.root {
+  cursor: pointer;
+  user-select: none;
+}
+
+.root .input {
+  position: relative;
+  margin: 0;
+  padding: 0;
+
+  height: 20px;
+  line-height: 20px;
+  font-size: 0.8rem;
+}
+
+.root .input::after {
+  position: absolute;
+  right: 0;
+  content: "▾";
+  opacity: 0.8;
+}
+
+.root .input.placeholder {
+  color: grey(33%);
+}
+
+.root .input.value {
+  color: black;
+}
+
+.root .options {
+  position: absolute;
+
+  display: none;
+
+  cursor: default;
+}
+
+.root:hover .options {
+  display: inline-block;
+
+  padding: 10px 0 5px;
+
+  font-size: 0.9rem;
+}
+
+.root .options .option_item {
+  padding: 5px;
+
+  cursor: pointer;
+}
+
+.root .options .option_item.selected {
+}
