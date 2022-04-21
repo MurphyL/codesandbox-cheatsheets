@@ -1,0 +1,27 @@
+:root {
+    --header-height: 45px;
+
+    --side-width: 220px;
+}
+
+.root {
+    display: flex;
+}
+
+.logo {
+    margin: 0;
+    padding: 0;
+    height: var(--header-height);
+    line-height: var(--header-height);
+
+    font-weight: 900;
+    text-align: center;
+}
+
+.navi {
+    flex: 1;
+}
+
+.aside {
+    width: var(--side-width);
+}

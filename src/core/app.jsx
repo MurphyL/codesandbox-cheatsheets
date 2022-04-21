@@ -1,14 +1,20 @@
-import { Suspense } from "react";
+import React, { Suspense } from "react";
 
 import { RecoilRoot } from "recoil";
 
 import { HelmetProvider } from "react-helmet-async";
 
-import { BrowserRouter, Outlet, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link, Outlet } from "react-router-dom";
+
 
 import { Loading } from "../plug/status/status.module";
 
-import CheatSheet from "../view/cheat-sheet/cheat-sheet.module";
+// import Layout from "../plug/site-layout/site-layout.module";
+
+import Authorizer from "../view/authorizer/authorizer.module";
+
+import Bookmark from "../view/bookmark/bookmark.module";
+import CheatSheet from "../view/cheatsheet/cheatsheet.module";
 
 import PackageFinder from "../view/package-finder/package-finder.module";
 
@@ -49,6 +55,8 @@ export default function App() {
                     </ul>
                   }
                 />
+                <Route path="/login" element={<Authorizer />} />
+                <Route path="/bookmark" element={<Bookmark />} />
                 <Route path="/package/finder" element={<PackageFinder />} />
                 {cheatsheets.map(({ unique, prepends, appends, ...extra }, index) => {
                   const options = {
